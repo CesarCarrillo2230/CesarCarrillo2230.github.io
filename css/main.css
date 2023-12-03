@@ -724,78 +724,64 @@ p.copyright {
   text-align: center;
 }
 
-/* Estilos para dispositivos móviles con pantallas hasta 480px de ancho */
+/* Media Queries para dispositivos móviles */
 @media only screen and (max-width: 480px) {
-    body, .seccion p, .detalle-celulares p, .detalle-tabletas p, .detalle-laptops p {
-        font-size: 14px; /* Tamaño de letra más pequeño para móviles */
+    .Top-Ventas {
+        min-height: auto; /* Permite que el contenido defina la altura */
+        padding: 20px 0; /* Añade un poco de espacio arriba y abajo */
     }
 
-    .contenedor {
-        width: 100%; /* El contenedor ocupa todo el ancho */
-        padding: 0 15px; /* Espaciado interno */
+    div.contenedor-video {
+        max-width: 100%; /* Asegúrate de que el contenedor de video no se desborde */
     }
 
-    .hero, .contenido-header, .informacion-tienda, .barra, .logo, .navegacion-principal, .ventas {
-        background-size: cover; /* Asegura que el fondo cubra el espacio */
-        text-align: center; /* Centra el texto */
+    div.Top-dispositivos {
+        position: relative; /* Cambia a posicionamiento relativo para dispositivos móviles */
+        height: auto; /* Permite que el contenido defina la altura */
     }
 
-    .hero {
-        height: auto; /* Altura automática para ajustarse al contenido */
-        padding: 20px 0; /* Espaciado superior e inferior */
+    div.ventas {
+        padding: 15px; /* Ajusta el relleno según sea necesario */
+        background-color: rgba(255, 255, 255, 0.9); /* Puede que quieras hacer el fondo un poco más opaco para la legibilidad */
     }
 
-    h1.nombre-sitio, h2, h3 {
-        font-size: 1.5em; /* Tamaño de letra más grande para visibilidad */
+    nav.menu-top {
+        width: 100%; /* Asegúrate de que el menú superior ocupe todo el ancho disponible */
     }
 
-    nav.navegacion-principal {
-        display: block; /* Muestra la navegación principal */
+    nav.menu-top a {
+        font-size: 1em; /* Reduce el tamaño de fuente para los enlaces si es necesario */
     }
 
-    nav.navegacion-principal a, .menu-top a {
-        font-size: 1em; /* Tamaño de letra más pequeño para enlaces */
-        margin: 0; /* Elimina márgenes externos */
-        padding: 10px; /* Espaciado interno */
-        border-bottom: 1px solid #ddd; /* Añade una línea para separar los enlaces */
+    div.detalle-celulares,
+    div.detalle-tabletas,
+    div.detalle-laptops {
+        border-bottom: 1px solid #ccc; /* Hace que la línea sea más sutil */
+        padding: 10px; /* Reduce el relleno para ahorrar espacio */
     }
 
-    .menu-movil {
-        display: block; /* Muestra el menú móvil */
+    div.producto img {
+        width: 100%; /* Asegúrate de que las imágenes sean fluidas */
+        height: auto; /* Mantiene la proporción de aspecto de las imágenes */
+        filter: none; /* Quita el filtro de escala de grises para una mejor visibilidad */
     }
 
-    .menu-movil span, .carrito-icono {
-        height: 4px; /* Altura más pequeña para las barras del menú móvil */
-        margin-bottom: 4px; /* Espaciado entre las barras */
-        background-color: #333; /* Color más oscuro para visibilidad */
+    div.producto p {
+        position: static; /* Cambia a posicionamiento estático para que los párrafos fluyan con el documento */
+        background-color: rgba(0, 0, 0, 0.7); /* Ajusta la opacidad del fondo para una mejor legibilidad */
+        color: #fff; /* Cambia el color del texto a blanco para que resalte sobre el fondo oscuro */
+        padding: 10px; /* Reduce el relleno */
+        font-size: 0.8em; /* Reduce el tamaño de fuente del texto */
+        text-transform: none; /* Elimina la transformación de texto en mayúsculas si es necesario */
+        white-space: normal; /* Permite que el texto se envuelva */
     }
 
-    .clearfix::after, .clearfix:before, .menu-top a i, .detalle-celulares p i, .detalle-tabletas p i, .detalle-laptops p i {
-        display: none; /* Oculta los pseudo-elementos y los íconos para un diseño más limpio */
+    ul.lista-productos li {
+        width: 100%; /* Permite que cada elemento de la lista de productos ocupe el ancho completo */
+        padding: 5px; /* Reduce el relleno */
     }
-
-    ul.lista-productos li, ul.lista-precios > li {
-        width: 100%; /* Los elementos de la lista ocupan el ancho completo */
-    }
-
-    div.producto, div.tabla-precio {
-        width: auto; /* Ancho automático para ajustarse al contenedor */
-        margin: 10px auto; /* Margen automático para centrar */
-    }
-
-    div.producto img, .tabla-precio ul li {
-        width: 100%; /* Las imágenes y listas ocupan el ancho completo */
-        height: auto; /* Altura automática para mantener la proporción de las imágenes */
-    }
-
-    footer .contenedor > div, footer nav.redes-sociales {
-        width: 100%; /* Los elementos del footer ocupan el ancho completo */
-        padding: 15px; /* Espaciado interno */
-        text-align: center; /* Centra el contenido */
-    }
-
-    /* ...otros ajustes que consideres necesarios... */
 }
+
 
 
 /* ==========================================================================
