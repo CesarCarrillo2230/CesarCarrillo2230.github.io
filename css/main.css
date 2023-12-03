@@ -182,8 +182,8 @@ ul{
 /** header **/
 
 div.hero {
-  background-color: #E5E7E9;
-  height: 100vh;
+  background-color: E5E7E9;
+  height: 50vh;
   background-position: top center;
   background-size: cover;
 }
