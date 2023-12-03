@@ -182,7 +182,7 @@ ul{
 /** header **/
 
 div.hero {
-  background-image: url(../img/encabezado.jpg);
+  background-color: #E5E7E9;
   height: 100vh;
   background-position: top center;
   background-size: cover;
