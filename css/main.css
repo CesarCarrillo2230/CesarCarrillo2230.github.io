@@ -727,7 +727,7 @@ p.copyright {
 /* Media Queries para dispositivos móviles */
 @media only screen and (max-width: 480px) {
     .Top-Ventas {
-        min-height: auto; /* Permite que el contenido defina la altura */
+        min-height: 1000px; /* Permite que el contenido defina la altura */
         padding: 20px 0; /* Añade un poco de espacio arriba y abajo */
     }
 
