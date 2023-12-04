@@ -16,7 +16,28 @@ document.addEventListener('DOMContentLoaded', function() {
     totalElement.classList.add('order-total');
     totalElement.textContent = `Total: $${total.toFixed(2)}`;
     orderSummaryElement.appendChild(totalElement);
+
+    // Agregar un evento de escucha al botón 'Continuar a Pago'
+    document.getElementById('continue-to-payment').addEventListener('click', function() {
+        // Verifica que cada campo del formulario de envío esté lleno
+        var fullName = document.getElementById('full-name').value.trim();
+        var address = document.getElementById('address').value.trim();
+        var city = document.getElementById('city').value.trim();
+        var postalCode = document.getElementById('postal-code').value.trim();
+        var country = document.getElementById('country').value.trim();
+
+        // Si algún campo está vacío, muestra un mensaje de error y no continúa al pago
+        if (!fullName || !address || !city || !postalCode || !country) {
+            alert('Por favor, completa todos los campos de envío antes de continuar.');
+            return; // Detiene la función aquí si algún campo está vacío
+        }
+
+        // Si todos los campos están llenos, oculta la sección de envío y muestra la de pago
+        document.querySelector('.shipping-section').style.display = 'none';
+        document.querySelector('.payment-section').classList.remove('hidden');
+    });
 });
+
 
 document.getElementById('payment-form').addEventListener('submit', function(event) {
     event.preventDefault();
@@ -52,4 +73,5 @@ document.getElementById('payment-form').addEventListener('submit', function(even
     window.location.href = 'pago-realizado.html';
     // Aquí iría el código para procesar el pago o redirigir a otra página
 });
+
 
