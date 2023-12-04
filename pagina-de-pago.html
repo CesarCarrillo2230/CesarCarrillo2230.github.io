@@ -1,39 +1,95 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Página de Pago</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
     <div class="container">
-        <div class="header">
-            <img src="img/Logo.jpg" alt="LogoEmpresa" class="logo">
-            <h2>Página de Pago</h2>
-        </div>
-        <div class="order-summary">
-            <h3>Resumen del Pedido</h3>
-            <!-- Los detalles del pedido se agregarán aquí dinámicamente con JavaScript -->
-        </div>
-        
-        <form id="payment-form">
-            <div class="form-group">
-                <label for="card-number">Número de Tarjeta:</label>
-                <input type="text" id="card-number" placeholder="1234 5678 9123 4567" required>
-            </div>
-            <div class="form-group">
-                <label for="card-expiration">Fecha de Expiración:</label>
-                <input type="month" id="card-expiration" required>
-            </div>
-            <div class="form-group">
-                <label for="card-cvv">CVV:</label>
-                <input type="text" id="card-cvv" placeholder="123" required>
-            </div>
-            <button type="submit">Pagar</button>
+      <div class="header">
+        <img src="img/Logo.jpg" alt="LogoEmpresa" class="logo" />
+        <h2>Página de Pago</h2>
+      </div>
+
+      <div class="order-summary">
+        <h3>Resumen del Pedido</h3>
+        <!-- Los detalles del pedido se agregarán aquí dinámicamente con JavaScript -->
+      </div>
+
+      <!-- Sección de Datos de Envío -->
+      <div class="shipping-section">
+        <h3>Datos de Envío</h3>
+        <form id="shipping-form">
+          <div class="form-group">
+            <label for="full-name">Nombre Completo:</label>
+            <input
+              type="text"
+              id="full-name"
+              placeholder="Nombre Completo"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="address">Dirección:</label>
+            <input type="text" id="address" placeholder="Dirección" required />
+          </div>
+          <div class="form-group">
+            <label for="city">Ciudad:</label>
+            <input type="text" id="city" placeholder="Ciudad" required />
+          </div>
+          <div class="form-group">
+            <label for="postal-code">Código Postal:</label>
+            <input
+              type="text"
+              id="postal-code"
+              placeholder="Código Postal"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="country">País:</label>
+            <select id="country" required>
+              <option value="">Selecciona un País</option>
+              <!-- Agrega opciones de países aquí -->
+              <option value="espana">España</option>
+              <option value="mexico">México</option>
+              <option value="argentina">Argentina</option>
+              <!-- ...otros países -->
+            </select>
+          </div>
+          <button type="button" id="continue-to-payment">
+            Continuar a Pago
+          </button>
         </form>
+      </div>
+
+      <!-- Sección de Pago, oculta inicialmente con la clase 'hidden' -->
+      <div class="payment-section hidden">
+        <form id="payment-form">
+          <div class="form-group">
+            <label for="card-number">Número de Tarjeta:</label>
+            <input
+              type="text"
+              id="card-number"
+              placeholder="1234 5678 9123 4567"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="card-expiration">Fecha de Expiración:</label>
+            <input type="month" id="card-expiration" required />
+          </div>
+          <div class="form-group">
+            <label for="card-cvv">CVV:</label>
+            <input type="text" id="card-cvv" placeholder="123" required />
+          </div>
+          <button type="submit">Pagar</button>
+        </form>
+      </div>
     </div>
 
     <script src="js/payment.js"></script>
-</body>
+  </body>
 </html>
