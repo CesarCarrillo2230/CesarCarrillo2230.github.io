@@ -19,6 +19,14 @@ body {
     max-width: 400px;
 }
 
+.shipping-section {
+    box-sizing: border-box; /* incluye el padding y border en el ancho total */
+    margin: 0 auto; /* centra la sección */
+    padding: 20px; /* ajusta el padding como sea necesario */
+    width: calc(100% - 40px); /* ajusta el ancho en función del padding */
+    /* ...otros estilos... */
+}
+
 h2 {
     color: #333;
     text-align: center;
@@ -114,5 +122,60 @@ button:hover {
     margin-top: 10px; /* Espacio antes del total */
     text-align: right; /* Alinear el total a la derecha */
     color: #fe4918; /* Color para resaltar el total */
+}
+
+/* Estilos para la sección de envío, siguiendo el diseño de la sección de pago */
+.shipping-section {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: left;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+
+.shipping-section h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.shipping-section .form-group {
+    margin-bottom: 15px;
+}
+
+.shipping-section .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.shipping-section .form-group input,
+.shipping-section .form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.shipping-section button {
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.shipping-section button:hover {
+    background-color: #ff4500;
+}
+
+/* Estilo para ocultar la sección de pago inicialmente */
+.hidden {
+    display: none;
 }
 
